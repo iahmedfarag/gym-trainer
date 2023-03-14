@@ -111,6 +111,20 @@ button {
   height: 100px;
 }
 
+.up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  font-size: 40px;
+  color: red;
+  z-index: 22;
+  cursor: pointer;
+  opacity: 0;
+}
+.up:hover {
+  opacity: 0.7;
+}
+
 .navMedia {
   display: none;
 }

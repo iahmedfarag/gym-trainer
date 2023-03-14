@@ -14,6 +14,8 @@ let gallery = Array.from(document.querySelectorAll(".gallery .img"));
 let navbarLinks = Array.from(document.querySelectorAll("nav ul li"));
 let navbarLinksMedia = Array.from(document.querySelectorAll(".navMedia ul li"));
 
+let topBtn = document.querySelector(".up");
+
 // ! window on scroll
 window.addEventListener("scroll", (e) => {
   let scrollY = this.scrollY;
@@ -28,6 +30,14 @@ window.addEventListener("scroll", (e) => {
     navbar.classList.remove("animate__fadeInDown");
     navbarMedia.classList.remove("active");
     navbarMedia.classList.remove("animate__fadeInDown");
+  }
+
+  if (scrollY >= 300) {
+    topBtn.style.opacity = 1;
+    topBtn.classList.add("animate__bounceInRight");
+  } else {
+    topBtn.style.opacity = 0;
+    topBtn.classList.remove("animate__bounceInRight");
   }
 
   // ! sections
@@ -65,12 +75,6 @@ navbarMenu.addEventListener("click", (e) => {
   }
 });
 
-gallery.map((img) => {
-  img.addEventListener("mouseover", (e) => {
-    img.style.opacity = "0.5";
-  });
-
-  img.addEventListener("mouseleave", (e) => {
-    img.style.opacity = "1";
-  });
+topBtn.addEventListener("click", (e) => {
+  window.scrollTo(0, 0);
 });
