@@ -1,0 +1,48 @@
+// ! hero
+
+.hero {
+  background-image: url("../images/h1_hero.png");
+  background-size: cover;
+  background-position: center center;
+  height: 85vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  padding-top: 100px;
+  .hi {
+    font-size: 60px;
+    font-weight: 100;
+    font-family: "Rampart One", cursive;
+  }
+  .job {
+    font-size: 80px;
+    letter-spacing: 1.9;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    .hi {
+      font-size: 50px;
+    }
+    .job {
+      font-size: 60px;
+    }
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+  .hero {
+    .hi {
+      font-size: 40px;
+    }
+    .job {
+      font-size: 50px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+// ! training categories
+
+.categoriesSection {
+  display: flex;
+  color: white;
+  .category {
+    padding: 190px 0;
+    width: 50%;
+    position: relative;
+    z-index: 0;
+    background-size: cover;
+    background-position: center center;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    &.personal {
+      background-image: url("../images/cat1.png");
+    }
+    &.group {
+      background-image: url("../images/cat2.png");
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .title {
+        margin-bottom: 20px;
+        font-size: 50px;
+        font-weight: 500;
+      }
+      .text {
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      .coursesBtn {
+        padding: 15px 40px;
+        font-weight: 600;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 7;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .categoriesSection {
+    flex-wrap: wrap;
+    .category {
+      width: 100%;
+    }
+  }
+}

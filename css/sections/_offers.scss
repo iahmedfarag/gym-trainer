@@ -1,0 +1,71 @@
+// ! what i offer
+
+.offersSection {
+  background-color: black;
+  color: white;
+  img {
+    max-width: 100%;
+  }
+  .container {
+    .offers {
+      display: flex;
+      gap: 50px;
+      .offer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .title {
+          margin: 20px 0;
+          margin-bottom: 10px;
+          font-size: 30px;
+          font-weight: 500;
+          &.active {
+            display: block;
+          }
+        }
+        .text {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .titleTemplate {
+    font-size: 60px;
+  }
+  .offersSection {
+    .container {
+      .offers {
+        flex-wrap: wrap;
+        gap: 20px;
+        .offer {
+          width: calc(50% - 10px);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .offersSection {
+    .container {
+      .offers {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        .offer {
+          width: 90%;
+          align-items: center;
+          img {
+            text-align: center;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+}

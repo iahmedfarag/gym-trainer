@@ -1,0 +1,84 @@
+// ! pricing
+.pricingSection {
+  background-color: black;
+  color: white;
+  .pricing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    .pack {
+      border: 1px solid grey;
+      width: calc(100% / 3 - 20px);
+      padding: 20px;
+      &:hover {
+        .joinBtn {
+          transition: 0.3s;
+          background-color: red;
+          color: white;
+        }
+      }
+      .dumbel {
+        margin-bottom: 30px;
+        font-size: 40px;
+        padding: 20px;
+        background-color: red;
+        border-radius: 50%;
+      }
+      .period {
+        font-size: 30px;
+        font-weight: 500;
+      }
+      .price {
+        margin-bottom: 30px;
+        font-size: 14px;
+        font-weight: 500;
+        span {
+          font-size: 30px;
+          font-weight: 500;
+          color: red;
+          margin-right: 10px;
+        }
+      }
+      .features {
+        margin-bottom: 30px;
+        li {
+          font-size: 16px;
+          font-weight: 500;
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+          i {
+            margin-right: 10px;
+            font-size: 16px;
+            color: red;
+          }
+        }
+      }
+      .joinBtn {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .pricingSection {
+    .pricing {
+      .pack {
+        width: calc(100% / 2 - 30px);
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .pricingSection {
+    padding: 0 30px;
+    .pricing {
+      .pack {
+        width: 100%;
+      }
+    }
+  }
+}
