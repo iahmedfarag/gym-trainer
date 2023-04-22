@@ -1,5 +1,4 @@
 # gym-trainer
-pure javascript
-website created with html, css, sass, js
+i used pure javascript to build a personal trainer website
 
 website url: https://trainerr.netlify.app/
